@@ -18,8 +18,24 @@ Ti_Cup_NUEDC-2022-10-B/
 ├── stm32_project/             	# 存放STM32工程文件				
 │   ├── CORE/   # 存放STM32内核寄存器定义映射，启动文件等文件	
 │   ├── FWLIB/  # 固件库文件
+│	│   ├── inc		# 固件库头文件
+│	│   └── src		# 固件库源文件
 │   ├── OBJ		# 存放目标文件
 │   ├── SYSTEM	# 模块驱动文件
+│	│   ├── BEER		# 蜂鸣器模块驱动文件
+│	│   ├── delay		# 延时模块驱动文件
+│	│   ├── Encoder		# 电机编码器模块驱动文件
+│	│   ├── KEY			# 独立按键模块驱动文件
+│	│   ├── LED			# LED控制模块驱动文件
+│	│   ├── MPU6050		# 6050模块驱动文件
+│	│   ├── oled		# oled显示器模块驱动文件
+│	│   ├── PWM			# pwm输出控制驱动文件
+│	│   ├── sensor		# 红外传感器模块驱动文件
+│	│   ├── Speed		# 电机模块驱动文件
+│	│   ├── STE			# 舵机模块驱动文件
+│	│   ├── TIMER		# 定时器驱动文件
+│	│   ├── usart		# 串口驱动文件
+│	│   └── sys			# 位带操作文件
 │   └── USER	# debug	keil相关文件
 │
 ├── SCH/                       # 电路原理图.pdf
@@ -40,6 +56,9 @@ Ti_Cup_NUEDC-2022-10-B/
 
 ## STM32c语言程序设计		
 
-本系统以STM32F407作为核心处理器，主要由OpenMV模块、循迹检测模块、蜂鸣器模块、直流电机、舵机等部分构成。该系统总体设计图以及系统设计清单如下图所示：                       
+​		本系统以STM32F407作为核心处理器，主要由OpenMV模块、循迹检测模块、蜂鸣器模块、直流电机、舵机等部分构成。该系统总体设计图以及系统设计清单如下图所示：                       
 
-### <img src="C:\Users\demo\Desktop\git_Repositories\Ti_Cup_NUEDC-2022-10-B\模块组成示意图.png" align="mi" alt="图1 系统总体设计图"  />
+
+
+<div align=center><img  src ="C:\Users\demo\Desktop\模块组成示意图.png"/></div>
+
