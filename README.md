@@ -191,7 +191,7 @@ STM32F407单片机核心板电路图如附录所示，其中包括MCU、晶振�
 
 ​															邻库有车倒车入库测试结果图
 
-  <div align=center><img  src ="There is a diagram of the test results of the reversing of the car in the adjacent warehouse.jpg"/></div> 
+ <div align=center><img  src ="https://github.com/zihaonian/Ti_Cup_NUEDC-2022-10-B/blob/main/res/There is a diagram of the test results of the reversing of the car in the adjacent warehouse.jpg"/></div> 
 
 ​															邻库有车侧方位停车测试结果图
 
