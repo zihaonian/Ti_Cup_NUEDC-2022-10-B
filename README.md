@@ -60,5 +60,5 @@ Ti_Cup_NUEDC-2022-10-B/
 
 
 
-<div align=center><img  src ="C:\Users\demo\Desktop\模块组成示意图.png"/></div>
+<div align=center><img  src ="https://github.com/zihaonian/Ti_Cup_NUEDC-2022-10-B/blob/main/res/Schematic diagram of module composition.png"/></div>
 
