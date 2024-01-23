@@ -11,6 +11,7 @@ Ti_Cup_NUEDC-2022-10-B/
 │
 ├── NUEDC-2022-10-B赛题/         # 存放电子设计大赛比赛题目
 │   └── B题-具有自动泊车功能的电动车赛题.pdf
+├── res/        				# 存放readme.md图表文件
 │
 ├── Openmv_code/           	    # 存放openmv视觉识别py代码
 │   └── Openmv_Color_Block_Recognition_Code.py
@@ -45,22 +46,28 @@ Ti_Cup_NUEDC-2022-10-B/
 │   ├── 具有自动泊车功能的电动车_赛题报告.docx    
 │   └── 具有自动泊车功能的电动车_赛题报告.pdf
 │
-├── 入库流程图.docx             # 侧方位停车，倒车入库过程图
-│
-└── README.md                 # 本文档，提供有关问题描述、解决思路以及文件结构等信息
+└── README.md                 # 本文档，提供测试方案与结果、入库过程图、系统总体设计以及文件结构等信息
 ```
 
+## 入库过程图
 
+### 倒车入库
+
+<div align=center><img  src ="https://github.com/zihaonian/Ti_Cup_NUEDC-2022-10-B/blob/main/res/Reversing into storage.jpg"/></div>
+
+### 侧方位停车
+
+<div align=center><img  src ="https://github.com/zihaonian/Ti_Cup_NUEDC-2022-10-B/blob/main/res/Side parking.jpg"/></div>
 
 ## 系统总体设计
 
-## OpenMV检测车库方法
+### OpenMV检测车库方法
 
 为了精确检测到车库位置，对摄像头采集到的视频进行实时的色块检测。对视频图像进行二值化处理并设定一个30×140的ROI区域，小车前进过程中不断检测并统计该区域中黑色像素点个数，当像素数达到设定阈值即表示检测到了车库交接处，通过IO口发送高电平信号给单片机，完成车库检测。车库检测方法示意图，如图所示。
 
 <div align=center><img  src ="https://github.com/zihaonian/Ti_Cup_NUEDC-2022-10-B/blob/main/res/Schematic diagram of garage inspection.jpg"/></div>
 
-## STM32c语言程序设计		
+### STM32c语言程序设计		
 
 ​		本系统以STM32F407作为核心处理器，主要由OpenMV模块、循迹检测模块、蜂鸣器模块、直流电机、舵机等部分构成。该系统总体设计图以及系统设计清单如下图所示：                       
 
@@ -89,7 +96,8 @@ Ti_Cup_NUEDC-2022-10-B/
 
 - 6个UART（串口），可灵活地与外部设备全双工数据交换。
 
-​		丰富的IO口，方便连接外设。
+- 丰富的IO口，方便连接外设。
+
 
 STM32F407单片机核心板电路图如附录所示，其中包括MCU、晶振和复位电路以及外接设备模块连接情况。
 
@@ -111,7 +119,7 @@ STM32F407单片机核心板电路图如附录所示，其中包括MCU、晶振�
 
   <div align=center><img  src ="https://github.com/zihaonian/Ti_Cup_NUEDC-2022-10-B/blob/main/res/Schematic diagram of the obstacle avoidance module.png"/></div>   
 
-### 系统程序设计
+## 系统程序设计
 
  <div align=center><img  src ="https://github.com/zihaonian/Ti_Cup_NUEDC-2022-10-B/blob/main/res/Overall flow chart of the system software.jpg"/></div>  
 
